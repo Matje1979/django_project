@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+    {% for image in images %}
+    <div>
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="{{ image.img.url }}">
+        </article>
+        <p>{{image.title}}</p>
+        <p>{{image.post|safe}}</p>
+    </div>
+
+    {% endfor %}
+{% endblock content %}
